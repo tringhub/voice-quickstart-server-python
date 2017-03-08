@@ -4,11 +4,11 @@ from twilio.jwt.access_token import AccessToken, VoiceGrant
 from twilio.rest import Client
 import twilio.twiml
 
-ACCOUNT_SID = 'AC***'
-API_KEY = 'SK***'
-API_KEY_SECRET = '***'
-PUSH_CREDENTIAL_SID = 'CR***'
-APP_SID = 'AP***'
+ACCOUNT_SID = 'AC07299af52325ae34215e065d329c23d8'
+API_KEY = 'SKb6e9ab277bf4cb0560c5cb246579b61e'
+API_KEY_SECRET = '0FYHleybCkdRvNkJyunO6yyW7rM8y7M6'
+PUSH_CREDENTIAL_SID = 'CR0880392c004ab618f7b64a0cc5d63189'
+APP_SID = 'APb6ef77259278b257ce7569b8297ac0b9'
 
 IDENTITY = 'voice_test'
 CALLER_ID = 'quick_start'
@@ -62,5 +62,5 @@ def welcome():
   return str(resp)
 
 if __name__ == "__main__":
-  port = int(os.environ.get("PORT", 5000))
+  port = int(os.environ.get("PORT", process.env.PORT || 5000))
   app.run(host='0.0.0.0', port=port, debug=True)
